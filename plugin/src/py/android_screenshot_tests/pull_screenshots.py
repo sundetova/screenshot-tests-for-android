@@ -107,7 +107,7 @@ def generate_html(
     output_dir,
     test_img_api=None,
     old_imgs_data=None,
-    diff=False,
+    diff=True,
 ):
     # Take in:
     # output_dir a directory with imgs and data outputted by the just-run test,
@@ -535,7 +535,7 @@ def pull_screenshots(process,
                      test_img_api=None,
                      old_imgs_data=None,
                      failure_dir=None,
-                     diff=False):
+                     diff=True):
     if not perform_pull and temp_dir is None:
         raise RuntimeError("""You must supply a directory for temp_dir if --no-pull is present""")
 
